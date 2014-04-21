@@ -8,9 +8,6 @@
 
 typedef int ElemType;
 
-///////////////////////////////////////////////////
-///////        Ëæ»ú´æÈ¡ O(n)Ìí¼ÓÉ¾³ý
-//////////////////////////////////////////////////
 
 typedef struct List
 {
@@ -39,6 +36,7 @@ Status init(SequenceList &list)
 }
 
 // i is the location to insert the element e, from 1.
+// O(n)
 Status insertElem(SequenceList &list, int i, ElemType e)
 {
 	if (list.Elem == NULL) exit(ERROR);
@@ -79,6 +77,8 @@ Status insertElem(SequenceList &list, int i, ElemType e)
 	return OK;
 }
 
+
+// O(n)
 Status deleteElem(SequenceList &list, int i, ElemType &e)
 {
 	if (list.Elem == NULL) exit(ERROR);
@@ -96,6 +96,7 @@ Status deleteElem(SequenceList &list, int i, ElemType &e)
 }
 
 // return the element index in the array.
+// O(n)
 int findElem(SequenceList & list, ElemType e)
 {
 	if (list.Elem == NULL)exit(ERROR);

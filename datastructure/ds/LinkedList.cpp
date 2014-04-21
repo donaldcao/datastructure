@@ -11,4 +11,18 @@ typedef struct node
 
 }LNode, *LinkedList;
 
-Status GetElement(LinkedList list, int i, ElemType *e);
+Status GetElement(LinkedList list, int i, ElemType &e)
+{
+	LinkedList p;
+
+	p = list->next; j = 1;
+	while (p&&j < i)
+	{
+		p = p->next; ++j;
+	}
+
+	if (!p || j>i) return ERROR;
+	e = p->data;
+
+	return OK
+}
