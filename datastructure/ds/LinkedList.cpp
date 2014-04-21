@@ -14,6 +14,7 @@ typedef struct node
 Status GetElement(LinkedList list, int i, ElemType &e)
 {
 	LinkedList p;
+	int j;
 
 	p = list->next; j = 1;
 	while (p&&j < i)
@@ -24,5 +25,5 @@ Status GetElement(LinkedList list, int i, ElemType &e)
 	if (!p || j>i) return ERROR;
 	e = p->data;
 
-	return OK
+	return OK;
 }
