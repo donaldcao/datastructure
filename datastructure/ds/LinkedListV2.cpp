@@ -108,6 +108,7 @@ Status Append(LinkedList &list, Node node)
 	list.tail = node;
 	list.len++;
 
+
 	return OK;
 }
 
