@@ -81,7 +81,9 @@ void CreateLinkedList(LinkedList &list, int n)
 	{
 		p = (LinkedList)malloc(sizeof(LNode));
 		if (!p)exit(ERROR);
-		scanf("%d",&p->data);
+
+		//get the input data.
+		scanf_s("%d",&p->data);
 		p->next = list->next;
 		list->next = p;
 	}

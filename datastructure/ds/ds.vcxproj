@@ -64,7 +64,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DoubleList.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LinkedListV2.cpp" />
     <ClCompile Include="SequenceList.cpp" />
   </ItemGroup>
   <ItemGroup>
