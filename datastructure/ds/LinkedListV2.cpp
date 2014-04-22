@@ -234,4 +234,3 @@ Status ListTraverse(LinkedList &list, Status(*visit)())
 	}
 	return OK;
 }
-
