@@ -68,6 +68,7 @@
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedListV2.cpp" />
     <ClCompile Include="SequenceList.cpp" />
+    <ClCompile Include="SequenceStack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
