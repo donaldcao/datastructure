@@ -122,7 +122,8 @@ void convert()
 {
 	initStack(s);
 	printf("Please enter the decimal number n: ");
-	scanf_s("%d\n", &n);
+	//char a;
+	scanf_s("%d", &n);
 	printf("n= %d\n", n);
 	while (n)
 	{
@@ -141,5 +142,6 @@ int main()
 {
 	convert();
 
-	
+	getchar();
+	getchar();
 }
