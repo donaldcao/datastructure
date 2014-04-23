@@ -21,11 +21,6 @@ Status insertElem(SequenceList & list, int i, ElemType e);
 Status deleteElem(SequenceList & list, int i, ElemType &e);
 int findElem(SequenceList & list, ElemType e);
 
-int main()
-{
-	return 0;
-}
-
 
 Status init(SequenceList &list)
 {

@@ -1,5 +1,6 @@
 
 #include <stdlib.h>
+#include <stdio.h>
 
 #define STACK_INIT_SIZE 100
 #define STACKINCREMENT 10
@@ -82,12 +83,13 @@ Status GetTop(Stack &s, ElemType &e)
 
 Status Push(Stack &s, ElemType e)
 {
-	if (s.head == s.top) return initStack(s);
+	if (s.size == 0)initStack(s);
 	if ((s.top-s.head)>=s.size)
 	{
 		ElemType *newbase = (ElemType*)realloc(s.head, sizeof(ElemType)*(s.size + STACKINCREMENT));
 		if (!newbase)return ERROR;
 		s.head = newbase;
+		s.top = s.head + s.size;
 		s.size += STACKINCREMENT;
 	}
 	*(s.top++) = e;
@@ -97,7 +99,7 @@ Status Push(Stack &s, ElemType e)
 
 Status Pop(Stack &s, ElemType &e)
 {
-	if (!s.top) return ERROR;
+	if (s.top==s.head) return ERROR;
 	e = *(--s.top);
 	return OK;
 }
@@ -111,4 +113,33 @@ Status StackTraverse(Stack &s, bool(*visit)())
 		(*visit)();
 	}
 	return OK;
+}
+
+Stack s;
+int n;
+int e;
+void convert()
+{
+	initStack(s);
+	printf("Please enter the decimal number n: ");
+	scanf_s("%d\n", &n);
+	printf("n= %d\n", n);
+	while (n)
+	{
+		Push(s, n % 8);
+		n = n / 8;
+	}
+
+	while (!StackIsEmpty(s))
+	{
+		Pop(s, e);
+		printf("%d\n", e);
+	}
+
+}
+int main()
+{
+	convert();
+
+	
 }
