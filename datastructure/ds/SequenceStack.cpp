@@ -11,8 +11,7 @@ typedef struct SqStack
 {
 	ElemType *head;
 	ElemType *top;
-	int size;
-	int capacity;
+	int size; // the memory allocated.
 }Stack, PStack;
 
 Status initStack(Stack&);
@@ -31,8 +30,7 @@ Status initStack(Stack & s)
 	if (!newbase)
 		exit(ERROR);
 	s.head = s.top = newbase;
-	s.size = 0;
-	s.capacity = STACK_INIT_SIZE;
+	s.size = STACK_INIT_SIZE;
 
 	return OK;
 }
@@ -60,7 +58,7 @@ Status DestroyStack(Stack &s)
 Status ClearStack(Stack &s)
 {
 	s.top = s.head;
-	s.size=0;
+	//s.size=0;
 
 	return OK;
 }
@@ -72,12 +70,12 @@ bool StackIsEmpty(Stack &s)
 
 int StackLength(Stack &s)
 {
-	return s.size;
+	return s.top - s.head;
 }
 
 Status GetTop(Stack &s, ElemType &e)
 {
-	if (s.size == 0) return ERROR;
+	if (s.head==s.top) return ERROR;
 	e = *(s.top-1);
 	return OK;
 }
@@ -85,14 +83,15 @@ Status GetTop(Stack &s, ElemType &e)
 Status Push(Stack &s, ElemType e)
 {
 	if (s.head == s.top) return initStack(s);
-	if (s.size >= s.capacity)
+	if ((s.top-s.head)>=s.size)
 	{
-		ElemType *newbase = (ElemType*)realloc(s.head, sizeof(ElemType)*(s.capacity + STACKINCREMENT));
+		ElemType *newbase = (ElemType*)realloc(s.head, sizeof(ElemType)*(s.size + STACKINCREMENT));
 		if (!newbase)return ERROR;
 		s.head = newbase;
-		s.capacity = s.capacity + STACKINCREMENT;
-		*(s.top++) = e;
+		s.size += STACKINCREMENT;
 	}
+	*(s.top++) = e;
+
 	return OK;
 }
 
@@ -113,9 +112,3 @@ Status StackTraverse(Stack &s, bool(*visit)())
 	}
 	return OK;
 }
-
-
-
-
-
-
