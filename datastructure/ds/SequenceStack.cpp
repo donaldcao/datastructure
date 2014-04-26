@@ -6,7 +6,7 @@
 #define STACKINCREMENT 10
 
 typedef int ElemType;
-typedef enum { OK, ERROR }Status;
+typedef enum Status { OK, ERROR }Status;
 
 typedef struct SqStack
 {
@@ -138,10 +138,13 @@ void convert()
 	}
 
 }
-int main()
+
+// Covert decimal number to octal number.
+int main2()
 {
 	convert();
 
 	getchar();
 	getchar();
 }
+
