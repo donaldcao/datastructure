@@ -2,18 +2,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include "common.h"
+
 #define STACK_INIT_SIZE 100
 #define STACKINCREMENT 10
 
-typedef int ElemType;
-typedef enum Status { OK, ERROR }Status;
 
-typedef struct SqStack
-{
-	ElemType *head;
-	ElemType *top;
-	int size; // the memory allocated.
-}Stack, PStack;
 
 Status initStack(Stack&);
 Status DestroyStack(Stack&);
@@ -139,12 +133,5 @@ void convert()
 
 }
 
-// Covert decimal number to octal number.
-int main2()
-{
-	convert();
 
-	getchar();
-	getchar();
-}
 
