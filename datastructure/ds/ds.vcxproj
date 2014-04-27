@@ -66,6 +66,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DoubleList.cpp" />
+    <ClCompile Include="hanoi.cpp" />
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedListV2.cpp" />
     <ClCompile Include="main.cpp" />
