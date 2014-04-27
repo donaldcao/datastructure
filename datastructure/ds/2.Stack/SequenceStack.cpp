@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "common.h"
+#include "..\common.h"
 
 #define STACK_INIT_SIZE 100
 #define STACKINCREMENT 10

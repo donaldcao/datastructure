@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "common.h"
+#include "..\common.h"
 
 #define LIST_INIT_SIZE 100
 #define LISTINCREMENT 10

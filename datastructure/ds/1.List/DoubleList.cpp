@@ -1,6 +1,6 @@
 
 #include <stdlib.h>
-#include "common.h"
+#include "..\common.h"
 
 typedef int ElemType;
 typedef struct DoubleNode
