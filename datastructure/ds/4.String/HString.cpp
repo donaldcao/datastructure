@@ -91,13 +91,18 @@ Status SubString(HString &sub,HString &s, int pos, int len)
 	return OK;
 }
 
+int next(int j)
+{
+	return j;
+}
+
 int KMP(HString &s, HString &t, int pos)
 {
 	int i = pos, j = 1;
 	while (i <= s.ch[0] && j <= t.ch[0])
 	{
 		if (j == 0 || s.ch[i] == t.ch[j]){ ++i; ++j; }
-		else j = next[j];
+		else j = next(j);
 	}
 
 	if(j > t.ch[0]) return i - t.ch[0];
