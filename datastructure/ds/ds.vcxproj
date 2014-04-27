@@ -65,13 +65,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DoubleList.cpp" />
-    <ClCompile Include="hanoi.cpp" />
-    <ClCompile Include="LinkedList.cpp" />
-    <ClCompile Include="LinkedListV2.cpp" />
+    <ClCompile Include="1. List\DoubleList.cpp" />
+    <ClCompile Include="2. Stack\hanoi.cpp" />
+    <ClCompile Include="1. List\LinkedList.cpp" />
+    <ClCompile Include="1. List\LinkedListV2.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SequenceList.cpp" />
-    <ClCompile Include="SequenceStack.cpp" />
+    <ClCompile Include="1. List\SequenceList.cpp" />
+    <ClCompile Include="2. Stack\SequenceStack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
