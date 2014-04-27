@@ -72,12 +72,14 @@
     <ClCompile Include="3.Queue\CircularQueue.cpp" />
     <ClCompile Include="3.Queue\Queue.cpp" />
     <ClCompile Include="3.Queue\queue.h" />
+    <ClCompile Include="4.String\HString.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="1.List\SequenceList.cpp" />
     <ClCompile Include="2.Stack\SequenceStack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3.Queue\CircularQueue.h" />
+    <ClInclude Include="4.String\HString.h" />
     <ClInclude Include="common.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
