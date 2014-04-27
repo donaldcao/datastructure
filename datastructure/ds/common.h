@@ -3,7 +3,9 @@
 #define _common_h
 
 typedef int ElemType;
-typedef enum Status { OK, ERROR }Status;
+typedef int QElemType;
+
+typedef enum eStatus { OK, ERROR }Status;
 
 typedef struct SqStack
 {
