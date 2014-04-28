@@ -72,7 +72,7 @@
     <ClCompile Include="1.List\LinkedListV2.cpp" />
     <ClCompile Include="3.Queue\CircularQueue.cpp" />
     <ClCompile Include="3.Queue\Queue.cpp" />
-    <ClCompile Include="3.Queue\queue.h" />
+    <ClCompile Include="3.Queue\Queue.h" />
     <ClCompile Include="4.String\HString.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="1.List\SequenceList.cpp" />
